@@ -1,10 +1,12 @@
 using UnityEngine;
+using DG.Tweening;
 
 namespace Assets.Scripts.Character
 {
     public class Player : MonoBehaviour
     {
         [SerializeField] private Rigidbody2D _rigidbody;
+        [SerializeField] private ParticleSystem _particleSystem;
         [SerializeField] private float _velocityX;
         [SerializeField] private float _velocityY;
 
@@ -32,6 +34,7 @@ namespace Assets.Scripts.Character
                 _reverseDirection = 1;
                 ScoreManager.Instance.Score += 1;
                 ScoreManager.Instance.UpdateScoreText();
+                PlayParticleSystem(new Vector3(0, 90, 0));
                 WallManager.Instance.EnableRightSpikes(4);
             }
             else if (collision.gameObject.CompareTag("WallRight"))
@@ -39,6 +42,7 @@ namespace Assets.Scripts.Character
                 _reverseDirection = -1;
                 ScoreManager.Instance.Score += 1;
                 ScoreManager.Instance.UpdateScoreText();
+                PlayParticleSystem(new Vector3(0, -90, 0));
                 WallManager.Instance.EnableLeftSpikes(4);
             }
             else if (collision.gameObject.CompareTag("Spike"))
@@ -46,8 +50,19 @@ namespace Assets.Scripts.Character
                 GameManager.Instance._isGameRunning = false;
                 ScoreManager.Instance.ActivateRestartButton();
             }
+            DoCameraShake();
         }
 
+        private void PlayParticleSystem(Vector3 rot)
+        {
+            var shape = _particleSystem.shape;
+            shape.rotation = rot;
+            _particleSystem.Play();
+        }
 
+        private void DoCameraShake()
+        {
+            Camera.main.DOShakePosition(0.1f, 0.1f, 1, 90);
+        }
     }
 }
