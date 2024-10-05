@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 90793486}
   - component: {fileID: 90793485}
   - component: {fileID: 90793487}
+  - component: {fileID: 90793488}
+  - component: {fileID: 90793489}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -227,7 +229,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90793483}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: edde0eaa7d021d84c8fc79b223c59413, type: 3}
   m_Name: 
@@ -236,6 +238,32 @@ MonoBehaviour:
   _particleSystem: {fileID: 1742165901}
   _velocityX: 3
   _velocityY: 5
+--- !u!114 &90793488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90793483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d763de8c573b543abee03327e3387c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 90793485}
+  _particlePrefabConflict: {fileID: 0}
+--- !u!114 &90793489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90793483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b11a849c201edb46ad1600b463ce207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &116003629
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,6 +275,7 @@ GameObject:
   - component: {fileID: 116003630}
   - component: {fileID: 116003631}
   - component: {fileID: 116003632}
+  - component: {fileID: 116003633}
   m_Layer: 0
   m_Name: Spike (16)
   m_TagString: Spike
@@ -369,6 +398,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &116003633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116003629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &155848525
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,6 +421,7 @@ GameObject:
   - component: {fileID: 155848526}
   - component: {fileID: 155848527}
   - component: {fileID: 155848528}
+  - component: {fileID: 155848529}
   m_Layer: 0
   m_Name: Spike (14)
   m_TagString: Spike
@@ -502,6 +544,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &155848529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155848525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &196278404
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &196278405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,6 +616,7 @@ GameObject:
   - component: {fileID: 199771324}
   - component: {fileID: 199771325}
   - component: {fileID: 199771326}
+  - component: {fileID: 199771327}
   m_Layer: 0
   m_Name: Spike (12)
   m_TagString: Spike
@@ -684,6 +739,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &199771327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199771323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &213568806
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,6 +1000,7 @@ GameObject:
   - component: {fileID: 298714029}
   - component: {fileID: 298714030}
   - component: {fileID: 298714031}
+  - component: {fileID: 298714032}
   m_Layer: 0
   m_Name: Spike (1)
   m_TagString: Spike
@@ -1055,6 +1123,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &298714032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298714028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &336769533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,6 +1146,7 @@ GameObject:
   - component: {fileID: 336769534}
   - component: {fileID: 336769535}
   - component: {fileID: 336769536}
+  - component: {fileID: 336769537}
   m_Layer: 0
   m_Name: Spike (14)
   m_TagString: Spike
@@ -1188,6 +1269,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &336769537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336769533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &380063214
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,6 +1292,7 @@ GameObject:
   - component: {fileID: 380063215}
   - component: {fileID: 380063216}
   - component: {fileID: 380063217}
+  - component: {fileID: 380063218}
   m_Layer: 0
   m_Name: Spike (8)
   m_TagString: Spike
@@ -1321,6 +1415,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &380063218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380063214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &386295208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,6 +1438,7 @@ GameObject:
   - component: {fileID: 386295209}
   - component: {fileID: 386295210}
   - component: {fileID: 386295211}
+  - component: {fileID: 386295212}
   m_Layer: 0
   m_Name: Spike (17)
   m_TagString: Spike
@@ -1454,6 +1561,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &386295212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386295208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &449803078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1465,6 +1584,7 @@ GameObject:
   - component: {fileID: 449803079}
   - component: {fileID: 449803080}
   - component: {fileID: 449803081}
+  - component: {fileID: 449803082}
   m_Layer: 0
   m_Name: Spike (13)
   m_TagString: Spike
@@ -1587,6 +1707,96 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &449803082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449803078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &515494799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 515494801}
+  - component: {fileID: 515494800}
+  - component: {fileID: 515494802}
+  m_Layer: 0
+  m_Name: SceneContext
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &515494800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515494799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89715ad69b973a14899afa2c6730b30b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectInstallers: []
+  _monoInstallers:
+  - {fileID: 515494802}
+  _installerPrefabs: []
+  _autoRun: 1
+  OnPreInstall:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPostInstall:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPreResolve:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPostResolve:
+    m_PersistentCalls:
+      m_Calls: []
+  _parentNewObjectsUnderSceneContext: 0
+  _contractNames: []
+  _parentContractNames: []
+--- !u!4 &515494801
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515494799}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &515494802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515494799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9637a22f34b79c94c9e5a223fc80fe3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterConfig: {fileID: 11400000, guid: b2b45bdcd789144448c94dac146a2da2, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1735,6 +1945,7 @@ GameObject:
   - component: {fileID: 607870355}
   - component: {fileID: 607870356}
   - component: {fileID: 607870357}
+  - component: {fileID: 607870358}
   m_Layer: 0
   m_Name: Spike (15)
   m_TagString: Spike
@@ -1857,6 +2068,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &607870358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607870354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,6 +2173,7 @@ GameObject:
   - component: {fileID: 747685158}
   - component: {fileID: 747685159}
   - component: {fileID: 747685160}
+  - component: {fileID: 747685161}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Spike
@@ -2072,6 +2296,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &747685161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747685157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &754537082
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,6 +2319,7 @@ GameObject:
   - component: {fileID: 754537083}
   - component: {fileID: 754537084}
   - component: {fileID: 754537085}
+  - component: {fileID: 754537086}
   m_Layer: 0
   m_Name: Spike (8)
   m_TagString: Spike
@@ -2205,6 +2442,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &754537086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754537082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &801755921
 GameObject:
   m_ObjectHideFlags: 0
@@ -2216,6 +2465,7 @@ GameObject:
   - component: {fileID: 801755922}
   - component: {fileID: 801755923}
   - component: {fileID: 801755924}
+  - component: {fileID: 801755925}
   m_Layer: 0
   m_Name: Spike (5)
   m_TagString: Spike
@@ -2338,6 +2588,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &801755925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801755921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &809343239
 GameObject:
   m_ObjectHideFlags: 0
@@ -2459,6 +2721,7 @@ GameObject:
   - component: {fileID: 856281717}
   - component: {fileID: 856281718}
   - component: {fileID: 856281719}
+  - component: {fileID: 856281720}
   m_Layer: 0
   m_Name: Spike (5)
   m_TagString: Spike
@@ -2581,6 +2844,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &856281720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856281716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &898001601
 GameObject:
   m_ObjectHideFlags: 0
@@ -2592,6 +2867,7 @@ GameObject:
   - component: {fileID: 898001602}
   - component: {fileID: 898001603}
   - component: {fileID: 898001604}
+  - component: {fileID: 898001605}
   m_Layer: 0
   m_Name: Spike (10)
   m_TagString: Spike
@@ -2714,6 +2990,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &898001605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898001601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &924430583
 GameObject:
   m_ObjectHideFlags: 0
@@ -2725,6 +3013,7 @@ GameObject:
   - component: {fileID: 924430584}
   - component: {fileID: 924430585}
   - component: {fileID: 924430586}
+  - component: {fileID: 924430587}
   m_Layer: 0
   m_Name: Spike (16)
   m_TagString: Spike
@@ -2847,6 +3136,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &924430587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924430583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &964317681
 GameObject:
   m_ObjectHideFlags: 0
@@ -2858,6 +3159,7 @@ GameObject:
   - component: {fileID: 964317682}
   - component: {fileID: 964317683}
   - component: {fileID: 964317684}
+  - component: {fileID: 964317685}
   m_Layer: 0
   m_Name: Spike (4)
   m_TagString: Spike
@@ -2980,6 +3282,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &964317685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964317681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1031496247
 GameObject:
   m_ObjectHideFlags: 0
@@ -2991,6 +3305,7 @@ GameObject:
   - component: {fileID: 1031496248}
   - component: {fileID: 1031496249}
   - component: {fileID: 1031496250}
+  - component: {fileID: 1031496251}
   m_Layer: 0
   m_Name: WallLeft
   m_TagString: WallLeft
@@ -3110,6 +3425,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1031496251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031496247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d30f12b3ec60ede429042aa8bbb9975b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wallType: 1
 --- !u!1 &1045830576
 GameObject:
   m_ObjectHideFlags: 0
@@ -3323,6 +3651,7 @@ GameObject:
   - component: {fileID: 1110946286}
   - component: {fileID: 1110946287}
   - component: {fileID: 1110946288}
+  - component: {fileID: 1110946289}
   m_Layer: 0
   m_Name: Spike (3)
   m_TagString: Spike
@@ -3445,6 +3774,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &1110946289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110946285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1166327968
 GameObject:
   m_ObjectHideFlags: 0
@@ -3707,6 +4048,7 @@ GameObject:
   - component: {fileID: 1206351535}
   - component: {fileID: 1206351536}
   - component: {fileID: 1206351537}
+  - component: {fileID: 1206351538}
   m_Layer: 0
   m_Name: Spike (17)
   m_TagString: Spike
@@ -3829,6 +4171,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &1206351538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206351534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1222743159
 GameObject:
   m_ObjectHideFlags: 0
@@ -3840,6 +4194,7 @@ GameObject:
   - component: {fileID: 1222743160}
   - component: {fileID: 1222743161}
   - component: {fileID: 1222743162}
+  - component: {fileID: 1222743163}
   m_Layer: 0
   m_Name: Spike (4)
   m_TagString: Spike
@@ -3962,6 +4317,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &1222743163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222743159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1264309399
 GameObject:
   m_ObjectHideFlags: 0
@@ -3973,6 +4340,7 @@ GameObject:
   - component: {fileID: 1264309400}
   - component: {fileID: 1264309401}
   - component: {fileID: 1264309402}
+  - component: {fileID: 1264309403}
   m_Layer: 0
   m_Name: Spike (11)
   m_TagString: Spike
@@ -4095,6 +4463,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &1264309403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264309399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1294102648
 GameObject:
   m_ObjectHideFlags: 0
@@ -4202,6 +4582,7 @@ GameObject:
   - component: {fileID: 1340955078}
   - component: {fileID: 1340955079}
   - component: {fileID: 1340955080}
+  - component: {fileID: 1340955081}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Spike
@@ -4324,6 +4705,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &1340955081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340955077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1374934852
 GameObject:
   m_ObjectHideFlags: 0
@@ -4465,6 +4858,7 @@ GameObject:
   - component: {fileID: 1375799762}
   - component: {fileID: 1375799763}
   - component: {fileID: 1375799764}
+  - component: {fileID: 1375799765}
   m_Layer: 0
   m_Name: Spike (2)
   m_TagString: Spike
@@ -4587,6 +4981,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &1375799765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375799761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1379783184
 GameObject:
   m_ObjectHideFlags: 0
@@ -4598,6 +5004,7 @@ GameObject:
   - component: {fileID: 1379783185}
   - component: {fileID: 1379783186}
   - component: {fileID: 1379783187}
+  - component: {fileID: 1379783188}
   m_Layer: 0
   m_Name: Spike (11)
   m_TagString: Spike
@@ -4720,6 +5127,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &1379783188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379783184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1427516427
 GameObject:
   m_ObjectHideFlags: 0
@@ -4731,6 +5150,7 @@ GameObject:
   - component: {fileID: 1427516428}
   - component: {fileID: 1427516429}
   - component: {fileID: 1427516430}
+  - component: {fileID: 1427516431}
   m_Layer: 0
   m_Name: Spike (13)
   m_TagString: Spike
@@ -4853,6 +5273,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &1427516431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427516427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1477771832
 GameObject:
   m_ObjectHideFlags: 0
@@ -4864,6 +5296,7 @@ GameObject:
   - component: {fileID: 1477771833}
   - component: {fileID: 1477771834}
   - component: {fileID: 1477771835}
+  - component: {fileID: 1477771836}
   m_Layer: 0
   m_Name: Spike (7)
   m_TagString: Spike
@@ -4986,6 +5419,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &1477771836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477771832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1481265330
 GameObject:
   m_ObjectHideFlags: 0
@@ -4997,6 +5442,7 @@ GameObject:
   - component: {fileID: 1481265331}
   - component: {fileID: 1481265332}
   - component: {fileID: 1481265333}
+  - component: {fileID: 1481265334}
   m_Layer: 0
   m_Name: Spike (10)
   m_TagString: Spike
@@ -5119,6 +5565,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &1481265334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481265330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1503638340
 GameObject:
   m_ObjectHideFlags: 0
@@ -5130,6 +5588,7 @@ GameObject:
   - component: {fileID: 1503638341}
   - component: {fileID: 1503638342}
   - component: {fileID: 1503638343}
+  - component: {fileID: 1503638344}
   m_Layer: 0
   m_Name: Spike (6)
   m_TagString: Spike
@@ -5252,6 +5711,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &1503638344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503638340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1598712317
 GameObject:
   m_ObjectHideFlags: 0
@@ -5263,6 +5734,7 @@ GameObject:
   - component: {fileID: 1598712318}
   - component: {fileID: 1598712319}
   - component: {fileID: 1598712320}
+  - component: {fileID: 1598712321}
   m_Layer: 0
   m_Name: Spike (15)
   m_TagString: Spike
@@ -5385,6 +5857,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &1598712321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598712317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1687472446
 GameObject:
   m_ObjectHideFlags: 0
@@ -5396,6 +5880,7 @@ GameObject:
   - component: {fileID: 1687472447}
   - component: {fileID: 1687472448}
   - component: {fileID: 1687472449}
+  - component: {fileID: 1687472450}
   m_Layer: 0
   m_Name: Spike (12)
   m_TagString: Spike
@@ -5518,6 +6003,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &1687472450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687472446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1692824965
 GameObject:
   m_ObjectHideFlags: 0
@@ -5529,6 +6026,7 @@ GameObject:
   - component: {fileID: 1692824966}
   - component: {fileID: 1692824967}
   - component: {fileID: 1692824968}
+  - component: {fileID: 1692824969}
   m_Layer: 0
   m_Name: Spike (6)
   m_TagString: Spike
@@ -5651,6 +6149,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &1692824969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692824965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1703416107
 GameObject:
   m_ObjectHideFlags: 0
@@ -5662,6 +6172,7 @@ GameObject:
   - component: {fileID: 1703416108}
   - component: {fileID: 1703416109}
   - component: {fileID: 1703416110}
+  - component: {fileID: 1703416111}
   m_Layer: 0
   m_Name: Spike (2)
   m_TagString: Spike
@@ -5784,6 +6295,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &1703416111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703416107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1742165898
 GameObject:
   m_ObjectHideFlags: 0
@@ -10684,6 +11207,7 @@ GameObject:
   - component: {fileID: 1940817864}
   - component: {fileID: 1940817865}
   - component: {fileID: 1940817866}
+  - component: {fileID: 1940817867}
   m_Layer: 0
   m_Name: Spike (3)
   m_TagString: Spike
@@ -10806,6 +11330,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &1940817867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940817863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2006548533
 GameObject:
   m_ObjectHideFlags: 0
@@ -10817,6 +11353,7 @@ GameObject:
   - component: {fileID: 2006548534}
   - component: {fileID: 2006548535}
   - component: {fileID: 2006548536}
+  - component: {fileID: 2006548537}
   m_Layer: 0
   m_Name: Spike (1)
   m_TagString: Spike
@@ -10939,6 +11476,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &2006548537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006548533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2018891836
 GameObject:
   m_ObjectHideFlags: 0
@@ -11148,6 +11697,7 @@ GameObject:
   - component: {fileID: 2076534793}
   - component: {fileID: 2076534794}
   - component: {fileID: 2076534795}
+  - component: {fileID: 2076534796}
   m_Layer: 0
   m_Name: Spike (7)
   m_TagString: Spike
@@ -11270,6 +11820,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &2076534796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076534792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42ecc3063ebe09499a5614424920275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2082726902
 GameObject:
   m_ObjectHideFlags: 0
@@ -11281,6 +11843,7 @@ GameObject:
   - component: {fileID: 2082726903}
   - component: {fileID: 2082726904}
   - component: {fileID: 2082726905}
+  - component: {fileID: 2082726906}
   m_Layer: 0
   m_Name: WallRight
   m_TagString: WallRight
@@ -11400,6 +11963,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2082726906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082726902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d30f12b3ec60ede429042aa8bbb9975b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wallType: 2
 --- !u!1 &2141741679
 GameObject:
   m_ObjectHideFlags: 0
@@ -11441,6 +12017,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 515494801}
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 2141741680}
