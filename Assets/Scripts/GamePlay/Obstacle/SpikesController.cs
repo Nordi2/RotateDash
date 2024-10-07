@@ -1,6 +1,7 @@
 using Assets.Scripts.GamePlay.Character;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Zenject;
 
 namespace Assets.Scripts.GamePlay
@@ -8,18 +9,22 @@ namespace Assets.Scripts.GamePlay
     public class SpikesController : IInitializable, IDisposable
     {
         private readonly ICharacterFacade _characterFacade;
-        private readonly List<ObstacleObject> _leftSpikes;
-        private readonly List<ObstacleObject> _rightSpikes;
+        private readonly List<ObstacleObject> _spikesList;
 
-        public SpikesController(ICharacterFacade characterFacade, List<ObstacleObject> rightSpikes, List<ObstacleObject> leftSpikes)
+        private List<ObstacleObject> _leftSpikes;
+        private List<ObstacleObject> _rightSpikes;
+
+        public SpikesController(ICharacterFacade characterFacade, List<ObstacleObject> spikesList)
         {
             _characterFacade = characterFacade;
-            _rightSpikes = rightSpikes;
-            _leftSpikes = leftSpikes;
+            _spikesList = spikesList;
         }
 
         public void Initialize()
         {
+            _leftSpikes = new List<ObstacleObject>(_spikesList.Where(obj => obj.TypeObstacle == TypeObstacle.SpikeLeft));
+            _rightSpikes = new List<ObstacleObject>(_spikesList.Where(obj => obj.TypeObstacle == TypeObstacle.SpikeRight));
+
             _characterFacade.OnColliderWithWall += ActivateSpikes;
 
             EnableRightSpikes();

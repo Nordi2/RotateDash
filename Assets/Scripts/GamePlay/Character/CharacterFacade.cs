@@ -8,10 +8,8 @@ namespace Assets.Scripts.GamePlay.Character
         public event Action OnDie;
         public event Action<TypeObstacle> OnColliderWithWall;
 
-        public void ColliderWithAWall(TypeObstacle typeObstacle)
-        {
+        public void ColliderWithAWall(TypeObstacle typeObstacle) =>
             OnColliderWithWall?.Invoke(typeObstacle);
-        }
 
         public void Die() =>
             OnDie?.Invoke();

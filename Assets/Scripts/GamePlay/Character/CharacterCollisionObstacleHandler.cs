@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using UnityEngine;
 using Zenject;
@@ -32,16 +33,30 @@ namespace Assets.Scripts.GamePlay.Character
             {
                 case TypeObstacle.None:
                     throw new ArgumentException("The type of obstacle is not selected");
+                case TypeObstacle.UpWall:
+                    DoCameraShake();
+                    break;
+                case TypeObstacle.BottonWall:
+                    DoCameraShake();
+                    break;
                 case TypeObstacle.LeftWall:
+                    DoCameraShake();
                     _characterFacade.ColliderWithAWall(typeObstacle);
                     break;
                 case TypeObstacle.RightWall:
+                    DoCameraShake();
                     _characterFacade.ColliderWithAWall(typeObstacle);
                     break;
-                case TypeObstacle.Spike:
+                case TypeObstacle.SpikeLeft:
+                    _characterFacade.Die();
+                    break;
+                case TypeObstacle.SpikeRight:
                     _characterFacade.Die();
                     break;
             }
         }
+
+        private void DoCameraShake() =>
+            Camera.main.DOShakePosition(0.1f, 0.1f, 1, 90);
     }
 }

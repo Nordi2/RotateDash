@@ -8,13 +8,12 @@ namespace Assets.Scripts.Infrastructure.Installers
 {
     public class SceneInstaller : MonoInstaller
     {
-        [SerializeField] private List<ObstacleObject> _leftSpikes;
-        [SerializeField] private List<ObstacleObject> _rightSpikes;
+        [SerializeField] private List<ObstacleObject> _spikesList;
 
         public override void InstallBindings()
         {
             Container.BindInterfacesTo<CharacterFacade>().FromComponentInHierarchy().AsSingle();
-            Container.BindInterfacesTo<SpikesController>().AsSingle().WithArguments(_rightSpikes, _leftSpikes).NonLazy();
+            Container.BindInterfacesTo<SpikesController>().AsSingle().WithArguments(_spikesList).NonLazy();
         }
     }
 }
