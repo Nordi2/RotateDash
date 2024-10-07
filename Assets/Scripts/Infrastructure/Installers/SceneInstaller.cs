@@ -1,20 +1,20 @@
+using Assets.Scripts.GamePlay.Character;
 using Zenject;
 using UnityEngine;
-using Assets.Scripts.GamePlay.Configs;
-using Assets.Scripts.GamePlay.Character;
+using System.Collections.Generic;
+using Assets.Scripts.GamePlay;
 
 namespace Assets.Scripts.Infrastructure.Installers
 {
     public class SceneInstaller : MonoInstaller
     {
-        [SerializeField] private CharacterConfig _characterConfig;
+        [SerializeField] private List<ObstacleObject> _leftSpikes;
+        [SerializeField] private List<ObstacleObject> _rightSpikes;
 
         public override void InstallBindings()
         {
-            Container.BindInstance(_characterConfig).AsSingle();
-            Container.Bind<DetectedWallObserver>().FromComponentInHierarchy().AsSingle();
-            Container.Bind<CharacterView>().FromComponentInHierarchy().AsSingle();
-            Container.BindInterfacesTo<CharacterMovement>().AsSingle();
+            Container.BindInterfacesTo<CharacterFacade>().FromComponentInHierarchy().AsSingle();
+            Container.BindInterfacesTo<SpikesController>().AsSingle().WithArguments(_rightSpikes, _leftSpikes).NonLazy();
         }
     }
 }

@@ -9,16 +9,22 @@ namespace Assets.Scripts.GamePlay.Character
     {
         private readonly CharacterView _characterView;
         private readonly CharacterConfig _characterConfig;
-        private readonly DetectedWallObserver _detectedWallObserver;
+        private readonly ICharacterFacade _characterFacade;
 
         private short _reverseDirection = 1;
 
-        public CharacterMovement(CharacterView characterView, CharacterConfig characterConfig, DetectedWallObserver detectedWallObserver)
+        public CharacterMovement(CharacterView characterView, CharacterConfig characterConfig, ICharacterFacade characterFacade)
         {
             _characterView = characterView;
             _characterConfig = characterConfig;
-            _detectedWallObserver = detectedWallObserver;
+            _characterFacade = characterFacade;
         }
+
+        public void Initialize() =>
+            _characterFacade.OnColliderWithWall += SwitchDirection;
+
+        public void Dispose() =>
+            _characterFacade.OnColliderWithWall -= SwitchDirection;
 
         public void Tick()
         {
@@ -26,29 +32,16 @@ namespace Assets.Scripts.GamePlay.Character
                 _characterView.Rigidbody.velocity = new Vector2(_characterConfig.VelocityX * _reverseDirection, _characterConfig.VelocityY);
         }
 
-        public void Dispose() =>
-            _detectedWallObserver.TriggerEnter -= OnTriggerEnter;
-
-        public void Initialize() =>
-            _detectedWallObserver.TriggerEnter += OnTriggerEnter;
-
-        private void OnTriggerEnter(Collision2D wall)
+        private void SwitchDirection(TypeObstacle obstacle)
         {
-            if (wall.gameObject.GetComponent<Wall>() is null)
-                return;
-
-            TypeWall newWall = wall.gameObject.GetComponent<Wall>().WallType;
-
-            switch (newWall)
+            switch (obstacle)
             {
-                case TypeWall.LeftWall:
+                case TypeObstacle.LeftWall:
                     _reverseDirection = 1;
                     break;
-                case TypeWall.RightWall:
+                case TypeObstacle.RightWall:
                     _reverseDirection = -1;
                     break;
-                default:
-                    throw new ArgumentException(nameof(newWall));
             }
         }
     }
