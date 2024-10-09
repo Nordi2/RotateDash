@@ -6,6 +6,8 @@ namespace Assets.Scripts.GamePlay.Character
 {
     public class CharacterVfxController : IInitializable, IDisposable
     {
+        private const int ANGLE_ROTATION_VFX = 90;
+
         private readonly CharacterView _characterView;
         private readonly ICharacterFacade _characterFacade;
 
@@ -30,10 +32,10 @@ namespace Assets.Scripts.GamePlay.Character
             switch (obstacle)
             {
                 case TypeObstacle.LeftWall:
-                    PlayParticleSystem(new Vector3(0, 90, 0));
+                    PlayParticleSystem(new Vector3(0, ANGLE_ROTATION_VFX, 0));
                     break;
                 case TypeObstacle.RightWall:
-                    PlayParticleSystem(new Vector3(0, -90, 0));
+                    PlayParticleSystem(new Vector3(0, -ANGLE_ROTATION_VFX, 0));
                     break;
             }
         }

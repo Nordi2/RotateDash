@@ -1,18 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
+using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
-public class ScreenGameOverView : MonoBehaviour
+namespace Assets.Scripts.GamePlay.UI
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ScreenGameOverView : MonoBehaviour
     {
-        
-    }
+        private const float DURATION_POSITION = 0.25f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [SerializeField] private TextMeshProUGUI    _textScore;
+        [SerializeField] private ButtonUp           _restartButton;
+        [SerializeField] private ButtonUp           _mainMenuButton;
+        [SerializeField] private RectTransform      _rectTransform;
+
+        public ButtonUp RestartButton   => _restartButton;
+        public ButtonUp MainMenuButton  => _mainMenuButton;
+
+        public void SetTextScore(string newTextScore)
+        {
+            _textScore.text = newTextScore;
+        }
+
+        public void SetPositionAnimations()
+        {
+            _rectTransform.DOAnchorPos(Vector2.zero, DURATION_POSITION);
+        }
     }
 }
